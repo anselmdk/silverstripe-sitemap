@@ -70,7 +70,8 @@ class SitemapPage extends Page {
 						'<li><a href="%s" title="%s">%s</a>',
 						$page->XML_val('Link'),
 						$page->XML_val('MenuTitle'),
-						$page->XML_val('Title')
+						//$page->XML_val('Title')
+						$page->obj('Title')->RAW()
 					);
 
 					if($children = $page->Children()) {

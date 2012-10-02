@@ -135,4 +135,10 @@ class SitemapPage extends Page {
  * @package silverstripe-sitemap
  */
 class SitemapPage_Controller extends Page_Controller {
+	
+	function init(){
+		parent::init();
+		Requirements::css('sitemap/css/SitemapPage.css');
+	}
+	
 }

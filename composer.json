@@ -1,0 +1,12 @@
+{
+  "name": "ajshort/sitemap",
+	"type": "silverstripe-module",
+	"description": "A module for SilverStripe that allows you to easily create sitemap pages.",
+	"keywords": ["silverstripe", "sitemap"],
+	"require": 
+	{
+		"php": ">=5.3.2",
+		"silverstripe/framework": "3.*",
+		"silverstripe/cms": "3.*"
+	}
+}

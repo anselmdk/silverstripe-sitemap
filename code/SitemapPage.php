@@ -103,31 +103,31 @@ class SitemapPage extends Page {
 		}
 	}
 
-	/**
-	 * Creates a default {@link SitemapPage} object if one does not currently exist.
-	 */
-	public function requireDefaultRecords() {
-		if(!$sitemap = DataObject::get_one('SitemapPage')) {
-			$sitemap = new SitemapPage();
-
-			$sitemap->Title   = _t('SitemapPage.SITEMAP', 'Sitemap');
-			$sitemap->Content = sprintf (
-				'<p>%s</p>',
-				_t('SitemapPage.DEFAULTCONTENT','This page displays a sitemap of the pages in your site.')
-			);
-
-			$sitemap->write();
-			$sitemap->doPublish();
-
-			if(method_exists('DB', 'alteration_message')) {
-				DB::alteration_message('Created default Sitemap page.', 'created');
-			} else {
-				Database::alteration_message('Created default Sitemap page.', 'created');
-			}
-		}
-
-		parent::requireDefaultRecords();
-	}
+//	/**
+//	 * Creates a default {@link SitemapPage} object if one does not currently exist.
+//	 */
+//	public function requireDefaultRecords() {
+//		if(!$sitemap = DataObject::get_one('SitemapPage')) {
+//			$sitemap = new SitemapPage();
+//
+//			$sitemap->Title   = _t('SitemapPage.SITEMAP', 'Sitemap');
+//			$sitemap->Content = sprintf (
+//				'<p>%s</p>',
+//				_t('SitemapPage.DEFAULTCONTENT','This page displays a sitemap of the pages in your site.')
+//			);
+//
+//			$sitemap->write();
+//			$sitemap->doPublish();
+//
+//			if(method_exists('DB', 'alteration_message')) {
+//				DB::alteration_message('Created default Sitemap page.', 'created');
+//			} else {
+//				Database::alteration_message('Created default Sitemap page.', 'created');
+//			}
+//		}
+//
+//		parent::requireDefaultRecords();
+//	}
 
 }
 
